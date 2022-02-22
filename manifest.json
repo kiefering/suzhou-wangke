@@ -50,7 +50,9 @@
 		"http://*.szwzedu.cn/*",
 		"https://*.szwzedu.cn/*",
 		"http://*.zjgedu.cn/*",
-		"https://*.zjgedu.cn/*"
+		"https://*.zjgedu.cn/*",
+		"http://*.cssxsjy.cn/*",
+		"https://*.cssxsjy.cn/*"
     ],
     "js": [
         "lib/jquery3.4.min.js",

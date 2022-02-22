@@ -1,0 +1,64 @@
+{
+  "name": "视频提取插件",
+  "version": "1.0",
+  "description": "苏州网课视频提取插件 by Kiefer",
+  "permissions": [
+    "activeTab", 
+    "declarativeContent", 
+    "storage",
+    "contextMenus",
+    "webRequest", 
+    "webRequestBlocking",
+    "tabs",
+    "contextMenus",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "omnibox": { "keyword" : "nt" },
+  "page_action": {
+    "default_title": "视频提取插件",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "web_accessible_resources": ["js/inject.js", "images/**", "ajax_interceptor.js"],
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  
+  "content_scripts": [{
+    "matches": [
+		"http://*.ksedu.cn/*",
+		"https://*.ksedu.cn/*",
+		"http://*.edu.cn/*",
+		"https://*.edu.cn/*",
+		"http://*.tceduyun.cn/*",
+		"https://*.tceduyun.cn/*",
+		"http://*.sipedu.org/*",
+		"https://*.sipedu.org/*",
+		"http://*.szwzedu.cn/*",
+		"https://*.szwzedu.cn/*",
+		"http://*.zjgedu.cn/*",
+		"https://*.zjgedu.cn/*"
+    ],
+    "js": [
+        "lib/jquery3.4.min.js",
+        "content_script.js"
+    ],
+    "css": ["base.css"]
+  }],
+  
+  
+  "manifest_version": 2
+}

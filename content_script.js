@@ -8,14 +8,17 @@ $('.crawl-btn').click(function(){
     imgArr.push(realSrc)
   })
   var imgBox = $("<div class='img-box'></div>");
-  imgArr.forEach(item => {
-    var imgWrap = $("<div class='img-wrap'></div>");
-    var img = $("<a href='" + item + "'>" + item + "</a>");
-    imgWrap.append(img);
-    imgBox.append(imgWrap);
-  })
-  console.log(imgArr)
-  
+  if (imgArr.length == 0){
+	var imgBox = $("<div class='img-box'>此页无视频<br>请在视频播放页面点击查找视频</div>");
+  }else{
+	  imgArr.forEach(item => {
+		var imgWrap = $("<div class='img-wrap'></div>");
+		var img = $("<a href='" + item + "'>" + item + "</a><br>");
+		imgWrap.append(img);
+		imgBox.append(imgWrap);
+	  })
+	  console.log(imgArr)
+  }
 
   Modal.show({
     title: '提取结果',
@@ -65,17 +68,10 @@ $('.crawl-btn').click(function(){
   }
 }()
 
-// var imgURL = chrome.runtime.getURL("/images/icon48.png");
-// $('img')[0].src = imgURL;
 
-chrome.runtime.onMessage.addListener(
-  
-});
+chrome.runtime.onMessage.addListener();
 
-//  chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-//   console.log(response, document.body);
-//   // document.body.style.backgroundColor="orange"
-// });
+
 
 // 在页面上插入代码
 // 在配置文件中需设置"persistent": true, 因为事件页面不支持webrequest

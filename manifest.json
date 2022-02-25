@@ -29,7 +29,7 @@
       "128": "images/icon128.png"
     }
   },
-  "web_accessible_resources": ["js/inject.js", "images/**", "ajax_interceptor.js"],
+  "web_accessible_resources": ["images/**", "ajax_interceptor.js"],
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
@@ -39,6 +39,8 @@
   
   "content_scripts": [{
     "matches": [
+		//"http://*/*",
+		//"https://*/*",
 		"http://*.ksedu.cn/*",
 		"https://*.ksedu.cn/*",
 		"http://*.edu.cn/*",

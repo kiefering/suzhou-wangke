@@ -7,13 +7,13 @@ $('.crawl-btn').click(function(){
     var realSrc = /^(http|https)/.test(src) ? src : location.protocol+ '//' + location.host + src;
     imgArr.push(realSrc)
   })
-  var imgBox = $("<div class='img-box'></div>");
+  var imgBox = $("<ol class='img-box'></ol>");
   if (imgArr.length == 0){
 	var imgBox = $("<div class='img-box'>此页无视频<br>请在视频播放页面点击查找视频</div>");
   }else{
 	  imgArr.forEach(item => {
-		var imgWrap = $("<div class='img-wrap'></div>");
-		var img = $("<a href='" + item + "'>" + item + "</a><br>");
+		var imgWrap = $("<li class='img-wrap'></li>");
+		var img = $("<a href='" + item + "'>" + item + "</a>");
 		imgWrap.append(img);
 		imgBox.append(imgWrap);
 	  })

@@ -1,25 +1,22 @@
 {
   "name": "视频提取插件",
-  "version": "1.0",
+  "version": "2.0",
   "description": "苏州网课视频提取插件 by Kiefer",
   "permissions": [
     "activeTab", 
     "declarativeContent", 
     "storage",
-    "contextMenus",
+    "scripting",
     "webRequest", 
-    "webRequestBlocking",
-    "tabs",
-    "contextMenus",
-    "http://*/*",
-    "https://*/*"
+    "tabs"
+    
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "service_worker": "background.js"
   },
   "omnibox": { "keyword" : "nt" },
-  "page_action": {
+  
+  "action": {
     "default_title": "视频提取插件",
     "default_popup": "popup.html",
     "default_icon": {
@@ -29,7 +26,7 @@
       "128": "images/icon128.png"
     }
   },
-  "web_accessible_resources": ["images/**", "ajax_interceptor.js"],
+  
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
@@ -63,6 +60,6 @@
     "css": ["base.css"]
   }],
   
-  
-  "manifest_version": 2
+  //"options_page": "options.html",
+  "manifest_version": 3
 }

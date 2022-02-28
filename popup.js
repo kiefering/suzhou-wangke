@@ -26,7 +26,7 @@ function getVideoLink() {
   if(num ==0){
 	  var d_wp = document.createElement("div");
 	  d_wp.setAttribute("id", "video-html");
-	  d_wp.setAttribute("style", "width:500px;height:200px;background:#A64DFF;display:block;z-index:9999999;position:absolute;left:100px;top:150px;word-break:break-all;padding:20px;color:#fff");
+	  d_wp.setAttribute("style", "width:500px;height:200px;background:#A64DFF;display:block;z-index:9999999;position:fixed;left:100px;top:150px;word-break:break-all;padding:20px;color:#fff");
 	  document.body.prepend(d_wp);
 	  var  v_wp= document.getElementById("video-html");
 	  var p = document.createElement("p");
@@ -34,7 +34,7 @@ function getVideoLink() {
   }else{
 	  var d_wp = document.createElement("div");
 	  d_wp.setAttribute("id", "video-html");
-	  d_wp.setAttribute("style", "width:500px;height:200px;background:#A64DFF;display:block;z-index:9999999;position:absolute;left:100px;top:150px;word-break:break-all;padding:20px;color:#fff");
+	  d_wp.setAttribute("style", "width:500px;height:200px;background:#A64DFF;display:block;z-index:9999999;position:fixed;left:100px;top:150px;word-break:break-all;padding:20px;color:#fff");
 	  var p = document.createElement("p");
 	  document.body.prepend(d_wp);
 	  var  v_wp= document.getElementById("video-html");
